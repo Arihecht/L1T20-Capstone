@@ -1,0 +1,185 @@
+/* Options html CSS for radio form */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.header {
+	position: relative;
+  /*higher z-index value */
+	z-index: 1000;
+	width: 100%;
+	height: 170vh;
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/main.jpg);
+	background-size: cover;
+	background-position: center;
+  /* Add padding to accommodate the fixed navbar */
+	padding-top: 80px;
+}
+
+body {
+	color: #EB8500;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	padding-top: 50px;
+}
+
+/* Navbar CSS */
+.navbar {
+  /* Fix the navbar position */
+	position: fixed;
+  /* Place it at the top of the page */
+	top: 0;
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+  /* Ensure it stays above other elements */
+	z-index: 1000;
+}
+
+.navbar h3 {
+	color: #EB8500;
+	width: 120px;
+	font-size: 50px;
+	cursor: pointer;
+	text-wrap: nowrap;
+	margin: 0 20px;
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #009688;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.navbar ul li::after {
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #EB8500;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+h1,
+h2 {
+	margin-top: 50px;
+	text-align: center;
+}
+/* css for contact form */
+.form2 {
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 20px;
+	border: 2px solid #009688;
+	border-radius: 10px;
+}
+
+label,
+input,
+textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+button {
+	background-color: #009688;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+button:hover {
+	color: #EB8500;
+}
+
+/* css for contact info table */
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 80%;
+}
+
+th,
+td {
+	border: 1px solid #009688;
+	padding: 10px;
+}
+
+/* css for qoute/testimonial */
+.testimonial {
+	margin: 50px auto;
+	max-width: 600px;
+	padding: 20px;
+	border: 2px solid #009688;
+	border-radius: 10px;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 0;
+}
+
+cite {
+	display: block;
+	margin-top: 10px;
+	font-style: normal;
+}
+
+/* css for footer */
+.footer {
+	border-top: 6px solid #009688;
+	background-color: black;
+	width: 100%;
+	height: 30vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.footer a {
+	color: white;
+	font-size: 30px;
+	margin-top: 10px;
+	border: 2px solid #EB8500;
+	background-color: #009688;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.footer a:hover {
+	color: #EB8500;
+}
+
+

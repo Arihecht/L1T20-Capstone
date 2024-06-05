@@ -1,0 +1,141 @@
+/* General CSS */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+/* Header CSS */
+.header {
+	position: relative;
+    /* Add a higher z-index value */
+	z-index: 1000;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/main.jpg);
+	background-size: cover;
+	background-position: center;
+	padding-top: 80px;
+}
+
+/* Navbar CSS */
+.navbar {
+    /* Fix the navbar position */
+	position: fixed;
+    /* Place it at the top of the page */
+	top: 0;
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+    /* Ensure it stays above other elements */
+	z-index: 1000;
+}
+
+body {
+	padding-top: 70px;
+}
+
+
+.navbar h3 {
+	color: #EB8500;
+	width: 120px;
+	font-size: 50px;
+	cursor: pointer;
+	text-wrap: nowrap;
+	margin: 0 20px;
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #009688;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.navbar ul li::after {
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #EB8500;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+	color: #EB8500;
+	margin-bottom: 20px;
+	font-size: 50px;
+}
+
+/* css for saved list */
+#saved-list {
+	list-style: none;
+	padding: 0;
+}
+
+#saved-list li {
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #009688;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#saved-list li:hover {
+	background-color: #ccc;
+}
+
+/* css for footer */
+.footer {
+	border-top: 6px solid #009688;
+	background-color: black;
+	width: 100%;
+	height: 30vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.footer a {
+	color: white;
+	font-size: 30px;
+	margin-top: 10px;
+	border: 2px solid #EB8500;
+	background-color: #009688;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.footer a:hover {
+	color: #EB8500;
+}
+
+
