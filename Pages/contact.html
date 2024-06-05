@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!--Header section-->
+    <div class="header">
+      <div class="navbar">
+        <a href="index.html">
+          <h3>FitFusion</h3>
+        </a>
+        <!--List in navbar-->
+        <ul>
+          <li><a href="index.html#cardio-section">Cardio</a></li>
+          <li><a href="index.html#strength-section">Strength</a></li>
+          <li><a href="index.html#flexibility-section">Flexibility</a></li>
+          <li><a href="index.html#aerobic-section">Aerobic</a></li>
+          <li><a href="index.html#balance-section">Balance</a></li>
+          <li><a href="saved.html">Saved</a></li>
+        </ul>
+      </div>
+      <h1>FitFusion Contact</h1>
+      <!-- Contact Form -->
+      <h2>Contact Form</h2>
+      <form class="form2" action="submit_contact_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <button type="submit">Submit</button>
+        <button class="save-button" data-title="Contact Form" data-content="form2">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </form>
+      <!-- Contact Information -->
+      <h2>Contact Information</h2>
+      <table>
+        <tr>
+          <th>Department:</th>
+          <th>Contact:</th>
+        </tr>
+        <tr>
+          <td>Customer Support</td>
+          <td><a href="mailto:sales@fitfusion.com" style="color: #EB8500;">sales@fitfusion.com</a></td>
+        </tr>
+        <tr>
+          <td>Sales</td>
+          <td><a href="mailto:sales@fitfusion.com" style="color: #EB8500;">sales@fitfusion.com</a></td>
+        </tr>
+      </table>
+      <br>
+      <button class="save-button" data-title="Contact Details" data-content="form2">Save for later</button>
+      <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      <!-- Testimonial -->
+      <div class="testimonial">
+        <h2>Testimonial</h2>
+        <blockquote>
+          "FitFusion transformed my workout routine, making fitness both effective and enjoyable!"
+          <cite>- AH</cite>
+        </blockquote>
+      </div>
+      <button class="save-button" data-title="Testimonial" data-content="testimonial">Save for later</button>
+      <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+    </div>
+    <!--Footer section-->
+    <div class="footer">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </body>
+</html>

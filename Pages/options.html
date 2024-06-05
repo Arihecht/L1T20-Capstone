@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!--Header-->
+    <div class="header">
+      <div class="navbar">
+        <a href="index.html">
+          <h3>FitFusion</h3>
+        </a>
+        <!--List in navbar-->
+        <ul>
+          <li><a href="index.html#cardio-section">Cardio</a></li>
+          <li><a href="index.html#strength-section">Strength</a></li>
+          <li><a href="index.html#flexibility-section">Flexibility</a></li>
+          <li><a href="index.html#aerobic-section">Aerobic</a></li>
+          <li><a href="index.html#balance-section">Balance</a></li>
+          <li><a href="saved.html">Saved</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--Radio form for more options-->
+    <div class="form">
+      <p>What content would you like to focus on?</p>
+      <form>
+        <div class="options">
+          <input type="radio" id="option1" name="focus" value="option1">
+          <label for="option1">Cardio</label><br>
+          <input type="radio" id="option2" name="focus" value="option2">
+          <label for="option2">Strength</label><br>
+          <input type="radio" id="option3" name="focus" value="option3">
+          <label for="option3">Flexibility</label><br>
+          <input type="radio" id="option4" name="focus" value="option4">
+          <label for="option4">Aerobic</label><br>
+          <input type="radio" id="option5" name="focus" value="option5">
+          <label for="option5">Balance</label><br>
+        </div>
+        <button type="submit">Submit</button>
+        <button class="save-button" data-title="Options" data-content="options">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </form>
+    </div>
+    <!--Footer Section-->
+    <div class="footer">
+      <a href="index.html">Back to Home</a>
+      <!--Form to add a comment-->
+      <div class="comment-form">
+        <h3>Leave a Comment or suggestion:</h3>
+        <form id="commentForm" action="submit_comment.php" method="post">
+          <label for="commentName">Name:</label>
+          <input type="text" id="commentName" name="commentName" required><br>
+          <label for="commentMessage">Comment:</label>
+          <textarea id="commentMessage" name="commentMessage" rows="4" required></textarea><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+      
+      
