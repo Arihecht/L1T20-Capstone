@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFusion</title>
+    <!--Linking main css-->
+    <link rel="stylesheet" href="main.css">
+    <!--Linking special font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--Linking JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Linking JS file-->
+    <script src="main.js"></script>
+  </head>
+  <!--Header section of webpage-->
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <a href="index.html">
+          <h3>FitFusion</h3>
+        </a>
+        <!--List in navbar-->
+        <ul>
+          <li><a href="#cardio-section">Cardio</a></li>
+          <li><a href="#strength-section">Strength</a></li>
+          <li><a href="#flexibility-section">Flexibility</a></li>
+          <li><a href="#aerobic-section">Aerobic</a></li>
+          <li><a href="#balance-section">Balance</a></li>
+          <li><a href="saved.html">Saved</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--Start of content section-->
+    <div class="content">
+      <h1>Mastering 5 Exercise Techniques</h1>
+      <p>Subscribe to our newsletter for more tips and exercises!</p>
+      <form class="email-signup">
+        <input type="email" placeholder="Subscribe" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <!--Cardio Section-->
+    <div class="exercise cardio" id="cardio-section">
+      <div class="exercise-content">
+        <h1>Cardio</h1>
+        <p>
+          Regular cardio exercise improves heart health, aids weight management, and enhances mood. It releases endorphins, reduces stress, and boosts energy levels.<br> 
+          Additionally, it promotes better sleep and sharpens cognitive function, fostering overall well-being.
+        </p>
+        <button class="save-button" data-title="Cardio" data-content="cardio-section">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </div>
+    </div>
+    <!--Strength Section-->
+    <div class="exercise strength" id="strength-section">
+      <div class="exercise-content">
+        <h1>Strength</h1>
+        <p>
+          Strength training improves muscle strength and mass, boosts metabolism, enhances bone density, and promotes overall well-being.<br> 
+          It also aids weight management, reduces injury risk, and enhances mood and cognitive function.
+        </p>
+        <button class="save-button" data-title="Strength" data-content="strength-section">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </div>
+    </div>
+    <!--Flexibilty Section-->
+    <div class="exercise flexibility" id="flexibility-section">
+      <div class="exercise-content">
+        <h1>Flexibility</h1>
+        <p>
+          Flexibility training enhances joint mobility, reduces injury risk, and improves posture. It also boosts athletic performance by increasing agility and<br> 
+          range of motion. Additionally, it promotes relaxation, reduces muscle tension, and fosters mental well-being.
+        </p>
+        <button class="save-button" data-title="Flexibility" data-content="flexibility-section">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </div>
+    </div>
+    <!--Aerobic Section-->
+    <div class="exercise aerobic" id="aerobic-section">
+      <div class="exercise-content">
+        <h1>Aerobic</h1>
+        <p>
+          Aerobic training strengthens the heart and lungs, aiding weight management and improving mood.<br>
+          It boosts metabolism, releases endorphins, and enhances overall well-being. Incorporating aerobic workouts promotes physical fitness and mental health.
+        </p>
+        <button class="save-button" data-title="Aerobic" data-content="aerobic-section">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </div>
+    </div>
+    <!--Balance Section-->
+    <div class="exercise balance" id="balance-section">
+      <div class="exercise-content">
+        <h1>Balance</h1>
+        <p>
+          Balance training improves stability, reducing the risk of falls and injuries. It enhances proprioception and coordination, optimizing movement efficiency.<br>
+          Incorporating balance exercises into your routine promotes overall physical well-being and functional mobility.
+        </p>
+        <button class="save-button" data-title="Balance" data-content="balance-section">Save for later</button>
+        <button class="likeThisBtn" onclick="likeItem(this)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like This</button>
+      </div>
+    </div>
+    <!--Footer Section-->
+    <div class="footer">
+      <div class="footer-item">
+        <h2>YouTube Channel:</h2>
+        <a href="https://www.youtube.com">FitFusion</a>
+      </div>
+      <!--Links to 2 other webpages-->
+      <div class="footer-item">
+        <h2>What's your focus?</h2>
+        <a href="options.html">Click Here</a>
+      </div>
+      <div class="footer-item">
+        <!--Creating a dropdown by the contact us button-->
+        <div class="dropdown">
+          <h2>Contact Us:</h2>
+          <div class="dropdown-title">Contact Us</div>
+          <div class="dropdown-content">
+            <a href="contact.html">Contact Form</a>
+            <a href="contact.html">Email</a>
+            <a href="contact.html">Phone</a>1
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Creating a toggle button which hides/shows the footer section-->
+    <div class="toggle-button">
+      <button id="toggleFooterButton">Show/Hide Footer</button>
+    </div>
+  </body>
+</html>

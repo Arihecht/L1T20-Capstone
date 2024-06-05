@@ -1,0 +1,349 @@
+/* General CSS */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+/* Header CSS */
+.header {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/main.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+/* Navbar CSS */
+.navbar {
+    /* Fix the navbar position */
+	position: fixed;
+    /* Place it at the top of the page */
+	top: 0;
+    /* Make it span the entire width of the page */
+	width: 100%;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.7);
+    /* Ensure it stays above other elements */
+	z-index: 1000;
+    /* the navbar will be hidden before page loads */
+	opacity: 0;
+}
+
+/* Showing the Navbar when page loads - using animation/chained event */
+.navbar-show {
+	opacity: 1;
+	transition: opacity 2s ease-in-out;
+}
+
+.navbar h3 {
+	color: #EB8500;
+	width: 120px;
+	font-size: 50px;
+	cursor: pointer;
+	text-wrap: nowrap;
+	margin: 0 20px;
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #009688;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.navbar ul li::after {
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #EB8500;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+	width: 100%;
+}
+
+
+/* Content CSS */
+.content {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #009688;
+	margin-bottom: 40px;
+}
+
+.content h1 {
+	font-size: 90px;
+	margin-top: 80px;
+}
+
+.content p {
+	margin: 20px auto;
+	font-weight: 100;
+	font-size: 30px;
+	line-height: 20px;
+	color: #EB8500;
+}
+
+/* Email Sign Up CSS */
+.email-signup {
+	background: white;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	overflow: hidden;
+	width: 30%;
+	max-width: 400%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.email-signup input {
+	flex: 1;
+	border: 0;
+	outline: 0;
+	margin-top: 10px;
+	margin-left: 20px;
+	color: #EB8500;
+}
+
+.email-signup button {
+	background: #009688;
+	border: 0;
+	outline: 0;
+	color: white;
+	font-size: 16px;
+	padding: 15px 30px;
+}
+
+/* Exercise CSS */
+.exercise {
+	border-top: 6px solid #009688;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.exercise-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #EB8500;
+}
+
+.exercise-content h1 {
+	color: #009688;
+	text-decoration: underline;
+	font-size: 90px;
+	margin-top: 80px;
+}
+
+.exercise-content p {
+	margin: 20px auto;
+	padding: 0 20px;
+	font-weight: 100;
+	font-size: 30px;
+	line-height: 1.5;
+}
+
+/* CSS for background images */
+.exercise.cardio {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/cardio.jpg);
+}
+
+.exercise.strength {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/strength.jpg);
+}
+
+.exercise.flexibility {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/flexibility.jpg);
+}
+
+.exercise.aerobic {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/aerobic.jpg);
+}
+
+.exercise.balance {
+	background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(images/balance.jpg);
+}
+
+/* Footer CSS */
+.footer {
+	border-top: 6px solid #009688;
+	background-color: black;
+	width: 100%;
+	height: 70vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+/* css for toggle button */
+.toggle-button {
+	background-color: black;
+	text-align: center;
+}
+
+#toggleFooterButton {
+	margin-bottom: 30px;
+}
+
+.hidden {
+	display: none;
+}
+
+.footer-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* css for dropdown */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown .dropdown-title {
+	color: white;
+	font-size: 30px;
+	margin-top: 10px;
+	border: 2px solid #EB8500;
+	background-color: #009688;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.dropdown .dropdown-title:hover {
+	color: #009688;
+	background-color: #EB8500;
+	text-decoration: none;
+}
+
+.dropdown .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	min-width: 160px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown .dropdown-content a {
+	color: white;
+	font-size: 20px;
+	padding: 12px 16px;
+	display: block;
+	text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	background-color: black;
+}
+
+.dropdown-content a:hover {
+	background-color: #EB8500;
+}
+
+
+.footer h2 {
+	color: #009688;
+	text-align: center;
+	margin: 0;
+}
+
+.footer a:hover {
+	color: #009688;
+	background-color: #EB8500;
+	text-decoration: none;
+}
+
+.footer a {
+	color: white;
+	font-size: 30px;
+	margin-top: 10px;
+	border: 2px solid #EB8500;
+	background-color: #009688;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+/* css for buttons */
+button {
+	background-color: #009688;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+button:hover {
+	color: #EB8500;
+}
+
+/* css for like button */
+.likeThisBtn {
+	background-color: #009688;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.likeThisBtn i {
+	margin-right: 5px;
+}
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+    
+
+
+
