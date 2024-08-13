@@ -20,17 +20,17 @@ $(document).ready(function () {
     savedItems.push({ title: title, id: id, url: url }); // Store the URL along with title and ID
     localStorage.setItem('savedItems', JSON.stringify(savedItems));
 
-    const numSavedItems = savedItems.length;
+    const numSavedItems = savedItems.length; // Count the number of saved items
     alert('Item saved for later! You now have ' + numSavedItems + ' item(s) in your "Saved for later" folder.');
     loadSavedItems(); // Reload saved items list
   });
 
   // Function to remove saved items
   $(document).on('click', '.remove-button', function () {
-    const index = $(this).data('index');
+    const index = $(this).data('index'); // Get the index of the item to remove
     const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
     savedItems.splice(index, 1); // Remove the item at the specified index
-    localStorage.setItem('savedItems', JSON.stringify(savedItems));
+    localStorage.setItem('savedItems', JSON.stringify(savedItems)); // Update the saved items in local storage
     loadSavedItems(); // Reload saved items list
   });
 
@@ -83,12 +83,12 @@ $(document).ready(function () {
 
     event.preventDefault(); // Prevent form submission
     const formData = {
-      name: $('#name').val(),
-      email: $('#email').val(),
-      message: $('#message').val()
+      name: $('#name').val(), // Get value of name input field
+      email: $('#email').val(), // Get value of email input field
+      message: $('#message').val() // Get value of message input field
     };
 
-    // Get existing contact form data from session storage
+    // Retrieve existing contact form data from session storage or initialize an empty array
     const contactFormData = JSON.parse(sessionStorage.getItem('contactFormData')) || [];
 
     // Add new form data to the array
@@ -108,7 +108,7 @@ $(document).ready(function () {
 
   // function for the toggle button at footer of index.html
   $('#toggleFooterButton').click(function () {
-    $('.footer').toggleClass('hidden');
+    $('.footer').toggleClass('hidden'); // Toggle the 'hidden' class on the footer element
   });
 });
 
