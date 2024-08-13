@@ -1,6 +1,6 @@
 // JQuery 
 $(document).ready(function () {
-  
+
   // Function to animate the header, navbar, and h3 on page load
   const animateHeaderNavbar = () => {
     $('.header').addClass('header-show'); // Add class to show header
@@ -13,16 +13,21 @@ $(document).ready(function () {
 
   // Function to handle saving items
   $('.save-button').click(function () {
-    const title = $(this).data('title');
-    const id = $(this).data('content');
-    const url = window.location.href; // Get the URL of the current page
-    const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
-    savedItems.push({ title: title, id: id, url: url }); // Store the URL along with title and ID
-    localStorage.setItem('savedItems', JSON.stringify(savedItems));
+    try {
+      const title = $(this).data('title');
+      const id = $(this).data('content');
+      const url = window.location.href; // Get the URL of the current page
+      const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
+      savedItems.push({ title: title, id: id, url: url }); // Store the URL along with title and ID
+      localStorage.setItem('savedItems', JSON.stringify(savedItems));
 
-    const numSavedItems = savedItems.length; // Count the number of saved items
-    alert('Item saved for later! You now have ' + numSavedItems + ' item(s) in your "Saved for later" folder.');
-    loadSavedItems(); // Reload saved items list
+      const numSavedItems = savedItems.length; // Count the number of saved items
+      alert('Item saved for later! You now have ' + numSavedItems + ' item(s) in your "Saved for later" folder.');
+      loadSavedItems(); // Reload saved items list
+    } catch (error) {
+      console.error('Error saving item:', error);
+      alert('Failed to save the item. Please try again.');
+    }
   });
 
   // Function to remove saved items
@@ -79,9 +84,8 @@ $(document).ready(function () {
 
   // Function to handle contact form submission
   $('#contactForm').submit(function (event) {
-    event.preventDefault(); //
-
     event.preventDefault(); // Prevent form submission
+
     const formData = {
       name: $('#name').val(), // Get value of name input field
       email: $('#email').val(), // Get value of email input field
@@ -106,11 +110,12 @@ $(document).ready(function () {
     $('#message').val('');
   });
 
-  // function for the toggle button at footer of index.html
+  // Function for the toggle button at footer of index.html
   $('#toggleFooterButton').click(function () {
     $('.footer').toggleClass('hidden'); // Toggle the 'hidden' class on the footer element
   });
 });
+
 
 
 
